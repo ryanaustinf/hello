@@ -20,7 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 env = environ.Env(
     SECRET_KEY=str,
     DEBUG=(bool,False),
-    ALLOWED_HOSTS=(list,['127.0.0.1']),
+    ALLOWED_HOSTS=(list,[
+        '127.0.0.1'
+    ]),
     DATABASE_URL=(str,"sqlite:///%s" % os.path.join(BASE_DIR,'db.sqlite3'))
 )
 
